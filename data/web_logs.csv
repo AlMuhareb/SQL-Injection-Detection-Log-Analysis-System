@@ -1,0 +1,11 @@
+timestamp,ip_address,http_method,url,status_code,user_agent
+2026-06-09 10:15:22,192.168.1.20,GET,/login,200,Mozilla
+2026-06-09 10:16:05,45.77.12.88,POST,/login?username=admin'--,401,sqlmap
+2026-06-09 10:17:40,45.77.12.88,GET,"/products?id+1 UNION SELECT username,password FROM users",500,sqlmap
+2026-06-09 10:18:11,103.22.55.91,GET,"/search?q=' OR '1'='1",403,Mozilla
+2026-06-09 10:19:42,192.22.55.91,GET,/products?id=5,200,Mozilla
+2026-06-09 10:20:33,185.199.45.10,GET,"/admin?id=1; DROP TABLE users",500,curl
+2026-06-09 10:21:15,45.77.12.88,POST,/login?username=admin&passowrd=test,401,sqlmap
+2026-06-09 10:22:01,103.22.55.91,GET,/search?q=test,200,Mozilla
+2026-06-09 10:23:55,91.200.12.44,GET,"/products?id=2 OR 1=1",403,Unknown
+2026-06-09 10:25:10,192.168.1.20,GET,/home,200,Mozilla
